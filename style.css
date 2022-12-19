@@ -7,6 +7,7 @@
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
+    background-color: #fdfeff;
   }
   
   header {
@@ -46,52 +47,50 @@
   
   a {
     color:  rgb(145, 218, 218);
-    text-decoration: none;
+    text-decoration: underline;
   }
   
   .hero-banner {
-    height: 120px;
+    height: 150px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("../images/02-hero-bg.jpg");
     background-size: cover;
     background-position: center;
   }
+
   .left {
     background-color: rgb(145, 218, 218);
     width: 350px;
     height: 50px;
     float: right;
   margin-right: 50px;
-  margin-top: 50px;
+  margin-top: 70px;
   }
+
   .subtitle {
     margin-top: 10px;
    margin-left: 70px;
   }
-
-
 
   .page-wrapper {
     margin-top: 10px;
     margin-left: 40px;
     margin-right: 50px;
   } 
+
    .page-section {
     width: 100%;
-    padding: 50px;
+    padding: 100px;
   }
-  .page-section h2 {
-    height: auto;
-    width: 150px;
-    padding-right: -5px;
-    
-  }
+
 .about-info {
     float: right;
-    width: 70%;
-    height: 100px;
+    width: 83%;
+   height: 100px;
+    padding-left: 100px;
   }
+
   .main {
     width: 1130px;
     max-width: 95%;
@@ -100,25 +99,32 @@
     align-items: center;
     justify-content: space-around;
   } 
+  
   .vl {
     border-left: 6px solid #293c44;
-    height: 200px; 
+    height: 220px; 
     left: 50%;
     float: right;
   }
 
-  
-/* .vll {
+  .container {
+    width: 100%;
+    height: 800px;
+    margin-bottom: 50px;
+  }
+
+.vll {
     border-left: 6px solid #293c44;
     height: 1000px; 
     left: 50%;
-    float: right;
-} */
+}
+
 .grid-container {
     display: grid;
-    height: 500px;
+    grid-gap: .5em;
+    height: 800px;
     width: 75%;
-    border: 2px solid rgb(39, 124, 139);
+   padding-left: 100px;
     float: right;
     grid-template-columns: 1fr 1fr;
     grid-row: 1fr 1fr 1fr;
@@ -127,13 +133,60 @@
     "second third"
     "fourth fifth";
 }
+
 .toprow {
     grid-area: toprow;
+    border: 5px solid rgb(145, 218, 218);
+    background-image: url(images/02-portfolio-4.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
-.grid-container img {
-    display: flex;
-    justify-content: center;
+
+.second {
+    border: 5px solid rgb(145, 218, 218); 
+    background-image: url(images/02-portfolio-1.jpg);
+    background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
+
+.third {
+    border: 5px solid rgb(145, 218, 218);
+    background-image: url(images/02-portfolio-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fourth {
+    border: 5px solid rgb(145, 218, 218);
+    background-image: url(images/02-portfolio-3.jpg);
+    background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.fifth {
+    border: 5px solid rgb(145, 218, 218);
+    background-image: url(images/02-run-buddy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-text {
+    background-color: rgb(145, 218, 218);
+    width: 200px;
+    height: 75px;
+  margin-right: 50px;
+  margin-top: 75px;
+  } 
+
+.col-h {
+padding-left: 250px;
+}
+
   h1,
   h2,
   h3,
@@ -142,12 +195,81 @@
   h6 {
     margin: 0;
   }
-
-  h2 {
-    color: #293c44;
-  }
-  
-  p {
+ p {
     margin: 0;
   }
+  h3 {
+    color: #293c44;
+    width: 100px;
+  font-weight: bolder;
+  font-size: 2em;
+  }
   
+  #contact a {
+    color:  #293c44;
+    text-decoration: underline;
+    font-weight: bold;
+  font-size: 1.5em;
+ 
+  }
+  #contact ul {
+     list-style-type: none;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  }
+  #contact ul li {
+   margin: 8px;
+  padding-left: 10px;
+  }
+  .resume {
+    color:  #293c44;
+    font-weight: bold;
+  font-size: 2.5em;
+  display: flex;
+ justify-content: center;
+ padding-bottom: 50px;
+  }
+ embed {
+    width: 100%; 
+    height: 600px;
+  }
+
+  /* Media Query */
+  @media only screen and (max-width: 1000px) {
+    body {
+      background-color: lightblue;
+      width: 100%;
+    }
+   
+    header h1 { 
+        width: 200px;
+        height: 70px;
+      }
+     
+      header nav ul li {
+        display: inline-block;
+        margin-left: 15px;
+      }
+      
+    .page-section {
+        padding: 0px;
+    }
+    .about-info {
+     overflow-y: scroll;
+     overflow-x: auto;
+    }
+    .vl {
+        margin-left: 35px;
+    }
+    .container {
+        width: 100%;
+        height: 800px;
+        margin-bottom: 70px;
+      }
+    #contact ul {
+        list-style-type: none;
+        display: inline;
+     }
+  }
